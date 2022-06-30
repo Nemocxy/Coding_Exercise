@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "build": "echo 'build script executed'" 
+    "build": "npm run build" 
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
