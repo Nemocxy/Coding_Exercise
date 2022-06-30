@@ -30,6 +30,3 @@ steps:
     provisioningProfileLocation: 'secureFiles'
     provProfileSecureFile: 'AppleProvisioningProfile.mobileprovision'
   displayName: 'Install Apple Provisioning Profile'
-
-variables:
-  - group: React Native Variables
