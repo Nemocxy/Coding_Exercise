@@ -15,7 +15,7 @@ steps:
     versionSpec: '16.15.1'
   displayName: 'Install Node'
 
-- script: npm install
+- script: npm install --force
   displayName: 'npm install'
 
 - script: npm i -g expo-cli
