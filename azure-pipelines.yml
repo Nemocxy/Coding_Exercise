@@ -12,21 +12,14 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '9.7.1'
+    versionSpec: '16.15.1'
   displayName: 'Install Node'
 
-- script: |
-    npm install
+- script: npm install --force
   displayName: 'npm install'
 
-#- task: InstallAppleCertificate@2
-#  inputs:
-#    certSecureFile: AppleDeveloperCertificate.p12
-#    keychain: 'temp'
-#    deleteCert: true
-#  displayName: Install Apple Certificate
-#- task: InstallAppleProvisioningProfile@1
-#  inputs:
-#    provisioningProfileLocation: 'secureFiles'
-#    provProfileSecureFile: 'AppleProvisioningProfile.mobileprovision'
-#  displayName: 'Install Apple Provisioning Profile'
+- script: npm i -g expo-cli
+  displayName: 'install expo'
+  
+- script: expo start --web
+  displayName: 'start'
